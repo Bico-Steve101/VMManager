@@ -1,0 +1,1733 @@
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="bg-primary-subtle py-2">
+        <div class="container-medium d-flex align-items-center justify-content-between"><a class="btn btn-link p-0 text-body" [routerLink]="['/sign-in']"><span class="fa-solid fa-arrow-right-to-bracket me-2" data-fa-transform="down-1"></span>User Login</a>
+          <div class="dropdown"><button class="btn btn-sm p-0 d-md-none fs-8" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h"></span></button>
+            <ul class="dropdown-menu dropdown-menu-end" style="z-index: 9999">
+              <li><a class="dropdown-item"  [routerLink]="['/admin-overview']">Admin-Overview</a></li>
+              <li><a class="dropdown-item" href="#!">Blog</a></li>
+              <li><a class="dropdown-item" href="#!">Career</a></li>
+              <li><a class="dropdown-item" href="#!">Support</a></li>
+              <li><a class="dropdown-item" href="#!">+01 123 581321</a></li>
+            </ul>
+          </div>
+          <ul class="d-none d-md-flex gap-5 list-unstyled mb-0">
+            <li><a class="lh-1 text-body-tertiary fw-semibold fs-9" [routerLink]="['/admin-overview']">Admin-Overview</a></li>
+            <li><a class="lh-1 text-body-tertiary fw-semibold fs-9" href="#!">Blog</a></li>
+            <li><a class="lh-1 text-body-tertiary fw-semibold fs-9" href="#!">Career</a></li>
+            <li><a class="lh-1 text-body-tertiary fw-semibold fs-9" href="mailto:example@gmail.com"> <span class="fa-regular fa-envelope me-2" data-fa-transform="down-1"></span>Support</a></li>
+            <li><a class="lh-1 text-body-tertiary fw-semibold fs-9" href="tel:+01123581321"> <span class="fa-brands fa-whatsapp me-2"></span>+01 123 581321</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-body-emphasis sticky-top" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
+        <nav class="navbar navbar-landing navbar-expand-lg container-medium"><a class="navbar-brand flex-1 flex-lg-grow-0 me-lg-8 me-xl-13" [routerLink]="['/home']">
+            <div class="d-flex align-items-center"><img src="../../../assets/img/icons/logo.png" alt="phoenix" width="27" />
+              <h5 class="logo-text ms-2">VMManager</h5>
+            </div>
+          </a>
+          <div class="d-flex align-items-center gap-2 gap-sm-3 gap-md-4 my-2 order-lg-1">
+            <div class="theme-control-toggle fa-icon-wait">
+              <input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggleSm" />
+              <label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggleSm" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme" style="height:32px;width:32px;">
+                <span class="icon" data-feather="moon"></span>
+              </label>
+              <label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggleSm" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme" style="height:32px;width:32px;">
+                <span class="icon" data-feather="sun"></span>
+              </label>
+            </div>
+            <a class="btn btn-link text-body-tertiary p-0" href="#!">
+              <span data-feather="map-pin" style="width: 18px; height: 18px"></span>
+            </a>
+            <a class="btn btn-link text-body-tertiary p-0" href="#!">
+              <span data-feather="bell" style="width: 20px; height: 20px"></span>
+            </a>
+            <a class="btn btn-link text-body-tertiary p-0 me-2 me-lg-0" [routerLink]="['/manager-users']">
+              <span data-feather="user" style="width: 20px; height: 20px"></span>
+            </a>
+          </div><button class="navbar-toggler fs-8 ps-1 ps-sm-3 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mt-3 mt-lg-0">
+              <li class="nav-item border-bottom border-translucent border-bottom-lg-0"><a class="nav-link" [routerLink]="['/home']">Home</a></li>
+              <li class="nav-item border-bottom border-translucent border-bottom-lg-0"><a class="nav-link"[routerLink]="['/admin-overview']">Virtual Machines</a></li>
+              <li class="nav-item border-bottom border-translucent border-bottom-lg-0"><a class="nav-link" [routerLink]="['/manager-users']">Manage Users</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <section class="py-0 ">
+      <div class="content kanban-deals-content">
+        <nav class="mb-3 crm-deals-breadcrumb" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#!">Page 1</a></li>
+            <li class="breadcrumb-item"><a href="#!">Page 2</a></li>
+            <li class="breadcrumb-item active">Default</li>
+          </ol>
+        </nav>
+        <div>
+          <div class="px-4 px-lg-6">
+            <h2 class="mb-5">Vms</h2>
+            <div class="d-xl-flex justify-content-between">
+              <div class="mb-3"><button class="btn btn-primary me-4" type="button" data-bs-toggle="modal" data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-plus me-2"></span>Add Vn</button><button class="btn btn-link text-body px-0"><span class="fa-solid fa-file-export fs-9 me-2"></span>Export</button></div>
+              <div class="d-flex mb-4">
+                <div class="search-box">
+                  <form class="position-relative"><input class="form-control search-input search" type="search" placeholder="Search by name" aria-label="Search" />
+                    <span class="fas fa-search search-box-icon"></span>
+                  </form>
+                </div><select class="form-select w-auto mx-2" id="select-deals">
+                  <option>Vms</option>
+                </select><button class="btn px-3 btn-phoenix-secondary" type="button" data-bs-toggle="modal" data-bs-target="#reportsFilterModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-filter text-primary" data-fa-transform="down-3"></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 px-lg-6 scrollbar" data-kanban-container="data-kanban-container">
+            <div class="deals">
+              <div class="deals-col me-4">
+                <div class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                  <div>
+                    <h5 class="mb-2">High Speed</h5>
+                    <p class="fs-9 text-body-tertiary mb-1">Estimated Usage Cost:</p>
+                    <h4 class="mb-3">$37,000.00</h4>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <button class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button><button class="btn p-0" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs-10"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Edit VM</a></li>
+                      <li><a class="dropdown-item" href="#">Add maintenance window</a></li>
+                      <li><a class="dropdown-item" href="#">View all connected resources</a></li>
+                      <li><a class="dropdown-item" href="#">Clone VM</a></li>
+                      <li><a class="dropdown-item" href="#">Delete VM</a></li>
+                      <li><a class="dropdown-item" href="#">Display low-performance VMs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="scrollbar deals-items-container">
+                  <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-1" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-1"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 30, 2023<span class="text-body-quaternary"> . 2:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">CloudLite</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Development</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$14,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Development</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ally Aagaard</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-1">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-info">Running</span><span class="badge badge-phoenix badge-phoenix-danger">Urgent</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$14,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Development<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">SSD<span> . 4 GB</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option selected="selected">Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-2" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-2"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 29, 2022<span class="text-body-quaternary"> . 12:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">DevBox</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$23,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">High Performance</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Lonnie Kub</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-2">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-info">Running</span><span class="badge badge-phoenix badge-phoenix-success">Medium</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$23,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">High Performance<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">NVMe<span> . 16 GB RAM</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option selected="selected">Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deals-col me-4">
+                <div class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                  <div>
+                    <h5 class="mb-2">Medium Speed</h5>
+                    <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                    <h4 class="mb-3">$101,300.00</h4>
+                  </div>
+                  <div class="d-flex gap-3"><button class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button><button class="btn p-0" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs-10"></span></button>
+                   <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Edit VM</a></li>
+                      <li><a class="dropdown-item" href="#">Add maintenance window</a></li>
+                      <li><a class="dropdown-item" href="#">View all connected resources</a></li>
+                      <li><a class="dropdown-item" href="#">Clone VM</a></li>
+                      <li><a class="dropdown-item" href="#">Delete VM</a></li>
+                      <li><a class="dropdown-item" href="#">Display low-performance VMs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="scrollbar deals-items-container">
+                  <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-3" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-3"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 30, 2022<span class="text-body-quaternary"> . 06:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">True and True Attorneys</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Development</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$33,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">PBR Holdings</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Aida Moen</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-3">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-primary">In Progress</span><span class="badge badge-phoenix badge-phoenix-warning">High</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$33,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">PBR Holdings<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">SSD<span> . 4 GB</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option selected="selected">Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-4" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-4"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 30, 2022<span class="text-body-quaternary"> . 08:20 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">The Morlong Corporation</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$45,300.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Giraffes Studio</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Niko Koss</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-4">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-primary">In Progress</span><span class="badge badge-phoenix badge-phoenix-info">Low</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$45,300.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Giraffes Studio<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">26-12-2022<span> . 12:10 PM</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option selected="selected">Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-5" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-5"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 30, 2022<span class="text-body-quaternary"> . 3:25 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">Product List</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$23,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Birds eye</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Alec Haag</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-5">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-primary">In Progress</span><span class="badge badge-phoenix badge-phoenix-danger">Urgent</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$23,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Birds eye<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">SSD<span> . 4 GB</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option selected="selected">Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deals-col me-4">
+                <div class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                  <div>
+                    <h5 class="mb-2">Low Speed</h5>
+                    <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                    <h4 class="mb-3">$23,400.00</h4>
+                  </div>
+                  <div class="d-flex gap-3"><button class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button><button class="btn p-0" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs-10"></span></button>
+                   <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Edit VM</a></li>
+                      <li><a class="dropdown-item" href="#">Add maintenance window</a></li>
+                      <li><a class="dropdown-item" href="#">View all connected resources</a></li>
+                      <li><a class="dropdown-item" href="#">Clone VM</a></li>
+                      <li><a class="dropdown-item" href="#">Delete VM</a></li>
+                      <li><a class="dropdown-item" href="#">Display low-performance VMs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="scrollbar deals-items-container">
+                  <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-6" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-6"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 30, 2022<span class="text-body-quaternary"> . 3:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">Printing Services by Feltz</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$23,400.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ant Family</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ally Aagaard</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-6">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-warning">Pending</span><span class="badge badge-phoenix badge-phoenix-warning">High</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$23,400.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Ant Family<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">SSD<span> . 4 GB</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option selected="selected">Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deals-col me-4">
+                <div class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                  <div>
+                    <h5 class="mb-2">Ultra Fast</h5>
+                    <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                    <h4 class="mb-3">$260.00</h4>
+                  </div>
+                  <div class="d-flex gap-3"><button class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button><button class="btn p-0" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs-10"></span></button>
+                   <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Edit VM</a></li>
+                      <li><a class="dropdown-item" href="#">Add maintenance window</a></li>
+                      <li><a class="dropdown-item" href="#">View all connected resources</a></li>
+                      <li><a class="dropdown-item" href="#">Clone VM</a></li>
+                      <li><a class="dropdown-item" href="#">Delete VM</a></li>
+                      <li><a class="dropdown-item" href="#">Display low-performance VMs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="scrollbar deals-items-container">
+                  <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-7" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-7"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 31, 2022<span class="text-body-quaternary"> . 01:30 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">SP Flat Plate</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Development</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$14,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ant Family</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ola Smith</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-7">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-secondary">Canceled</span><span class="badge badge-phoenix badge-phoenix-success">Medium</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$14,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Ant Family<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">29-12-2022<span> . 01:30 PM</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option selected="selected">Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-300" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-8" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-8"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 31, 2022<span class="text-body-quaternary"> . 2:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">Ventilated Pipe</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$14,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Giraffes Studio</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Leif Walsh</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-8">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-secondary">Canceled</span><span class="badge badge-phoenix badge-phoenix-info">Low</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$14,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Giraffes Studio<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">29-12-2022<span> . 02:15 PM</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option selected="selected">Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-300" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deals-col me-4">
+                <div class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                  <div>
+                    <h5 class="mb-2">Balanced</h5>
+                    <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                    <h4 class="mb-3">$1,650.00</h4>
+                  </div>
+                  <div class="d-flex gap-3"><button class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button><button class="btn p-0" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs-10"></span></button>
+                   <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Edit VM</a></li>
+                      <li><a class="dropdown-item" href="#">Add maintenance window</a></li>
+                      <li><a class="dropdown-item" href="#">View all connected resources</a></li>
+                      <li><a class="dropdown-item" href="#">Clone VM</a></li>
+                      <li><a class="dropdown-item" href="#">Delete VM</a></li>
+                      <li><a class="dropdown-item" href="#">Display low-performance VMs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="scrollbar deals-items-container">
+                  <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-9" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-9"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 29, 2022<span class="text-body-quaternary"> . 03:12 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">Product Shipping</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Development</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$15,000.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Birds eye</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Brain Cole</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-9">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-success">Completed</span><span class="badge badge-phoenix badge-phoenix-danger">Urgent</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$15,000.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Birds eye<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">SSD<span> . 4 GB</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option selected="selected">Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-10" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-10"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 29, 2022<span class="text-body-quaternary"> . 06:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">Product List</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Development</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$33,00.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ink Incorporated</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Reese Mann</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-10">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-success">Completed</span><span class="badge badge-phoenix badge-phoenix-info">Low</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$33,00.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Ink Incorporated<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">28-12-2022<span> . 12:20 PM</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option>Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option selected="selected">Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card mb-3">
+                        <div class="card-body"><a class="dropdown-indicator-icon position-absolute text-body-tertiary" href="#collapseWidthDeals-11" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseWidthDeals-11"><span class="fa-solid fa-angle-down"></span></a>
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex"><span class="me-2" data-feather="clock" style="stroke-width:2;"></span>
+                              <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">Dec 29, 2022<span class="text-body-quaternary"> . 2:15 PM</span></p>
+                            </div>
+                          </div>
+                          <div class="deals-items-head d-flex align-items-center mb-2"><a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7" [routerLink]="['/vm-details']">Dimensions for Printing</a>
+                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span class="me-1 text-body-quaternary" data-feather="grid" style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace</p>
+                            <p class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">$23,400.00</p>
+                          </div>
+                          <div class="deals-company-agent d-flex flex-between-center">
+                            <div class="d-flex align-items-center"><span class="uil uil-user me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Slim Apes</p>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="uil uil-headphones me-2"></span>
+                              <p class="text-body-secondary fw-bold fs-9 mb-0">Ally Aagaard</p>
+                            </div>
+                          </div>
+                          <div class="collapse" id="collapseWidthDeals-11">
+                            <div class="d-flex gap-2 mb-5"><span class="badge badge-phoenix badge-phoenix-success">Completed</span><span class="badge badge-phoenix badge-phoenix-danger">Urgent</span></div>
+                            <table class="mb-4 w-100 table-stats table-stats">
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="dollar-sign"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Expected Revenue</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">$23,400.00</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="box" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">VM Types</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">Slim Apes<a href="#!"> <span class="fa-solid fa-square-phone text-body-tertiary"></span></a><a href="#!"> <span class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a href="#!"> <span class="fab fa-whatsapp-square text-body-tertiary"></span></a></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="database" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Storage Type</p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1">
+                                  <p class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">28-12-2022<span> . 02:19 PM</span></p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <div class="d-flex align-items-center"><span class="me-2 text-body-tertiary" data-feather="headphones" style="width:16px; height:16px"></span>
+                                    <p class="fw-semibold fs-9 mb-0 text-body-tertiary">Assigned Agent </p>
+                                  </div>
+                                </td>
+                                <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                <td class="py-1"><select class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                    <option selected="selected">Ally Aagaard</option>
+                                    <option>Lonnie Kub</option>
+                                    <option>Aida Moen</option>
+                                    <option>Niko Koss</option>
+                                    <option>Alec Haag</option>
+                                    <option>Ola Smith</option>
+                                    <option>Leif Walsh</option>
+                                    <option>Brain Cole</option>
+                                    <option>Reese Mann</option>
+                                  </select></td>
+                              </tr>
+                            </table>
+                            <p class="fs-9 mb-1"> Backup:</p>
+                            <div class="progress" style="height:8px">
+                              <div class="progress-bar rounded-pill bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deals-col position-relative">
+                <div class="d-flex flex-center flex-column h-100">
+                  <h3 class="mb-4">Add new package</h3><button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addStageModal" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fa-solid fa-plus me-2"></span>New Package</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer position-absolute">
+          <div class="row g-0 justify-content-between align-items-center h-100">
+            <div class="col-12 col-sm-auto text-center">
+              <p class="mb-0 mt-2 mt-sm-0 text-body">Thank you for creating with Steve-Rebrand<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy;<a class="mx-1" href="http://bico-steve.netlify.app">SMB</a></p>
+            </div>
+            <div class="col-12 col-sm-auto text-center">
+              <p class="mb-0 text-body-tertiary text-opacity-85">CP</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+      </section>
+      <div class="modal fade" id="searchBoxModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="true" data-phoenix-modal="data-phoenix-modal" style="--phoenix-backdrop-opacity: 1;">
+        <div class="modal-dialog">
+          <div class="modal-content mt-15 rounded-pill">
+            <div class="modal-body p-0">
+              <div class="search-box navbar-top-search-box" data-list='{"valueNames":["title"]}' style="width: auto;">
+                <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input fuzzy-search rounded-pill form-control-lg" type="search" placeholder="Search..." aria-label="Search" />
+                  <span class="fas fa-search search-box-icon"></span>
+                </form>
+                <div class="btn-close position-absolute end-0 top-50 translate-middle cursor-pointer shadow-none" data-bs-dismiss="search"><button class="btn btn-link p-0" aria-label="Close"></button></div>
+                <div class="dropdown-menu border start-0 py-0 overflow-hidden w-100">
+                  <div class="scrollbar-overlay" style="max-height: 30rem;">
+                    <div class="list pb-3">
+                      <h6 class="dropdown-header text-body-highlight fs-10 py-2">24 <span class="text-body-quaternary">results</span></h6>
+                      <hr class="my-0" />
+                      <h6 class="dropdown-header text-body-highlight fs-9 border-bottom border-translucent py-2 lh-sm">Recently Searched </h6>
+                      <div class="py-2"><a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"><span class="fa-solid fa-clock-rotate-left" data-fa-transform="shrink-2"></span> Store Macbook</div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"> <span class="fa-solid fa-clock-rotate-left" data-fa-transform="shrink-2"></span> MacBook Air - 13″</div>
+                          </div>
+                        </a>
+                      </div>
+                      <hr class="my-0" />
+                      <h6 class="dropdown-header text-body-highlight fs-9 border-bottom border-translucent py-2 lh-sm">Products</h6>
+                      <div class="py-2"><a class="dropdown-item py-2 d-flex align-items-center" href="../e-commerce/landing/product-details.html">
+                          <div class="file-thumbnail me-2"><img class="h-100 w-100 object-fit-cover rounded-3" src="../../assets/img/products/60x60/3.png" alt="" /></div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-body-highlight title">MacBook Air - 13″</h6>
+                            <p class="fs-10 mb-0 d-flex text-body-tertiary"><span class="fw-medium text-body-tertiary text-opactity-85">8GB Memory - 1.6GHz - 128GB Storage</span></p>
+                          </div>
+                        </a>
+                        <a class="dropdown-item py-2 d-flex align-items-center" href="../e-commerce/landing/product-details.html">
+                          <div class="file-thumbnail me-2"><img class="img-fluid" src="../../assets/img/products/60x60/3.png" alt="" /></div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-body-highlight title">MacBook Pro - 13″</h6>
+                            <p class="fs-10 mb-0 d-flex text-body-tertiary"><span class="fw-medium text-body-tertiary text-opactity-85">30 Sep at 12:30 PM</span></p>
+                          </div>
+                        </a>
+                      </div>
+                      <hr class="my-0" />
+                      <h6 class="dropdown-header text-body-highlight fs-9 border-bottom border-translucent py-2 lh-sm">Quick Links</h6>
+                      <div class="py-2"><a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"><span class="fa-solid fa-link text-body" data-fa-transform="shrink-2"></span> Support MacBook House</div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"> <span class="fa-solid fa-link text-body" data-fa-transform="shrink-2"></span> Store MacBook″</div>
+                          </div>
+                        </a>
+                      </div>
+                      <hr class="my-0" />
+                      <h6 class="dropdown-header text-body-highlight fs-9 border-bottom border-translucent py-2 lh-sm">Files</h6>
+                      <div class="py-2"><a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"><span class="fa-solid fa-file-zipper text-body" data-fa-transform="shrink-2"></span> Library MacBook folder.rar</div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"> <span class="fa-solid fa-file-lines text-body" data-fa-transform="shrink-2"></span> Feature MacBook extensions.txt</div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"> <span class="fa-solid fa-image text-body" data-fa-transform="shrink-2"></span> MacBook Pro_13.jpg</div>
+                          </div>
+                        </a>
+                      </div>
+                      <hr class="my-0" />
+                      <h6 class="dropdown-header text-body-highlight fs-9 border-bottom border-translucent py-2 lh-sm">Members</h6>
+                      <div class="py-2"><a class="dropdown-item py-2 d-flex align-items-center" href="../../pages/members.html">
+                          <div class="avatar avatar-l status-online  me-2 text-body">
+                            <img class="rounded-circle " src="../../assets/img/team/40x40/10.webp" alt="" />
+                          </div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-body-highlight title">Carry Anna</h6>
+                            <p class="fs-10 mb-0 d-flex text-body-tertiary">anna&#64;technext.it</p>
+                          </div>
+                        </a>
+                        <a class="dropdown-item py-2 d-flex align-items-center" href="../../pages/members.html">
+                          <div class="avatar avatar-l  me-2 text-body">
+                            <img class="rounded-circle " src="../../assets/img/team/40x40/12.webp" alt="" />
+                          </div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-body-highlight title">John Smith</h6>
+                            <p class="fs-10 mb-0 d-flex text-body-tertiary">smith&#64;technext.it</p>
+                          </div>
+                        </a>
+                      </div>
+                      <hr class="my-0" />
+                      <h6 class="dropdown-header text-body-highlight fs-9 border-bottom border-translucent py-2 lh-sm">Related Searches</h6>
+                      <div class="py-2"><a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"><span class="fa-brands fa-firefox-browser text-body" data-fa-transform="shrink-2"></span> Search in the Web MacBook</div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="../e-commerce/landing/product-details.html">
+                          <div class="d-flex align-items-center">
+                            <div class="fw-normal text-body-highlight title"> <span class="fa-brands fa-chrome text-body" data-fa-transform="shrink-2"></span> Store MacBook″</div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <p class="fallback fw-bold fs-7 d-none">No Result Found.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="support-chat-container">
+        <div class="container-fluid support-chat">
+          <div class="card bg-body-emphasis">
+            <div class="card-header d-flex flex-between-center px-4 py-3 border-bottom border-translucent">
+              <h5 class="mb-0 d-flex align-items-center gap-2">Demo widget<span class="fa-solid fa-circle text-success fs-11"></span></h5>
+              <div class="btn-reveal-trigger"><button class="btn btn-link p-0 dropdown-toggle dropdown-caret-none transition-none d-flex" type="button" id="support-chat-dropdown" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h text-body"></span></button>
+                <div class="dropdown-menu dropdown-menu-end py-2" aria-labelledby="support-chat-dropdown"><a class="dropdown-item" href="#!">Request a callback</a><a class="dropdown-item" href="#!">Search in chat</a><a class="dropdown-item" href="#!">Show history</a><a class="dropdown-item" href="#!">Report to Admin</a><a class="dropdown-item btn-support-chat" href="#!">Close Support</a></div>
+              </div>
+            </div>
+            <div class="card-body chat p-0">
+              <div class="d-flex flex-column-reverse scrollbar h-100 p-3">
+                <div class="text-end mt-6"><a class="mb-2 d-inline-flex align-items-center text-decoration-none text-body-emphasis bg-body-hover rounded-pill border border-primary py-2 ps-4 pe-3" href="#!">
+                    <p class="mb-0 fw-semibold fs-9">I need help with something</p><span class="fa-solid fa-paper-plane text-primary fs-9 ms-3"></span>
+                  </a><a class="mb-2 d-inline-flex align-items-center text-decoration-none text-body-emphasis bg-body-hover rounded-pill border border-primary py-2 ps-4 pe-3" href="#!">
+                    <p class="mb-0 fw-semibold fs-9">I can’t reorder a product I previously ordered</p><span class="fa-solid fa-paper-plane text-primary fs-9 ms-3"></span>
+                  </a><a class="mb-2 d-inline-flex align-items-center text-decoration-none text-body-emphasis bg-body-hover rounded-pill border border-primary py-2 ps-4 pe-3" href="#!">
+                    <p class="mb-0 fw-semibold fs-9">How do I place an order?</p><span class="fa-solid fa-paper-plane text-primary fs-9 ms-3"></span>
+                  </a><a class="false d-inline-flex align-items-center text-decoration-none text-body-emphasis bg-body-hover rounded-pill border border-primary py-2 ps-4 pe-3" href="#!">
+                    <p class="mb-0 fw-semibold fs-9">My payment method not working</p><span class="fa-solid fa-paper-plane text-primary fs-9 ms-3"></span>
+                  </a></div>
+                <div class="text-center mt-auto">
+                  <div class="avatar avatar-3xl status-online"><img class="rounded-circle border border-3 border-light-subtle" src="../../assets/img/team/30.webp" alt="" /></div>
+                  <h5 class="mt-2 mb-3">Eric</h5>
+                  <p class="text-center text-body-emphasis mb-0">Ask us anything – we’ll get back to you here or by email within 24 hours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer d-flex align-items-center gap-2 border-top border-translucent ps-3 pe-4 py-3">
+              <div class="d-flex align-items-center flex-1 gap-3 border border-translucent rounded-pill px-4"><input class="form-control outline-none border-0 flex-1 fs-9 px-0" type="text" placeholder="Write message" /><label class="btn btn-link d-flex p-0 text-body-quaternary fs-9 border-0" for="supportChatPhotos"><span class="fa-solid fa-image"></span></label><input class="d-none" type="file" accept="image/*" id="supportChatPhotos" /><label class="btn btn-link d-flex p-0 text-body-quaternary fs-9 border-0" for="supportChatAttachment"> <span class="fa-solid fa-paperclip"></span></label><input class="d-none" type="file" id="supportChatAttachment" /></div><button class="btn p-0 border-0 send-btn"><span class="fa-solid fa-paper-plane fs-9"></span></button>
+            </div>
+          </div>
+        </div>
+        <!-- <button class="btn btn-support-chat p-0 border border-translucent"><span class="fs-8 btn-text text-primary text-nowrap">Chat demo</span><span class="ping-icon-wrapper mt-n4 ms-n6 mt-sm-0 ms-sm-2 position-absolute position-sm-relative"><span class="ping-icon-bg"></span><span class="fa-solid fa-circle ping-icon"></span></span><span class="fa-solid fa-headset text-primary fs-8 d-sm-none"></span><span class="fa-solid fa-chevron-down text-primary fs-7"></span></button> -->
+      </div>
+    </main><!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <div class="offcanvas offcanvas-end settings-panel border-0" id="settings-offcanvas" tabindex="-1" aria-labelledby="settings-offcanvas">
+      <div class="offcanvas-header align-items-start border-bottom flex-column border-translucent">
+        <div class="pt-1 w-100 mb-6 d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-2 me-2 lh-sm"><span class="fas fa-palette me-2 fs-8"></span>Theme Customizer</h5>
+            <p class="mb-0 fs-9">Explore different styles according to your preferences</p>
+          </div><button class="btn p-1 fw-bolder" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><span class="fas fa-times fs-8"> </span></button>
+        </div><button class="btn btn-phoenix-secondary w-100" data-theme-control="reset"><span class="fas fa-arrows-rotate me-2 fs-10"></span>Reset to default</button>
+      </div>
+      <div class="offcanvas-body scrollbar px-card" id="themeController">
+        <div class="setting-panel-item mt-0">
+          <h5 class="setting-panel-item-title">Color Scheme</h5>
+          <div class="row gx-2">
+            <div class="col-4"><input class="btn-check" id="themeSwitcherLight" name="theme-color" type="radio" value="light" data-theme-control="phoenixTheme" /><label class="btn d-inline-block btn-navbar-style fs-9" for="themeSwitcherLight"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../../assets/img/generic/default-light.png" alt=""/></span><span class="label-text">Light</span></label></div>
+            <div class="col-4"><input class="btn-check" id="themeSwitcherDark" name="theme-color" type="radio" value="dark" data-theme-control="phoenixTheme" /><label class="btn d-inline-block btn-navbar-style fs-9" for="themeSwitcherDark"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../../assets/img/generic/default-dark.png" alt=""/></span><span class="label-text"> Dark</span></label></div>
+            <div class="col-4"><input class="btn-check" id="themeSwitcherAuto" name="theme-color" type="radio" value="auto" data-theme-control="phoenixTheme" /><label class="btn d-inline-block btn-navbar-style fs-9" for="themeSwitcherAuto"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../../assets/img/generic/auto.png" alt=""/></span><span class="label-text"> Auto</span></label></div>
+          </div>
+        </div>
+        <div class="border border-translucent rounded-3 p-4 setting-panel-item bg-body-emphasis">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="setting-panel-item-title mb-1">RTL </h5>
+            <div class="form-check form-switch mb-0"><input class="form-check-input ms-auto" type="checkbox" data-theme-control="phoenixIsRTL" /></div>
+          </div>
+          <p class="mb-0 text-body-tertiary">Change text direction</p>
+        </div>
+        <div class="border border-translucent rounded-3 p-4 setting-panel-item bg-body-emphasis">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="setting-panel-item-title mb-1">Support Chat </h5>
+            <div class="form-check form-switch mb-0"><input class="form-check-input ms-auto" type="checkbox" data-theme-control="phoenixSupportChat" /></div>
+          </div>
+          <p class="mb-0 text-body-tertiary">Toggle support chat</p>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Navigation Type</h5>
+          <div class="row gx-2">
+            <div class="col-6"><input class="btn-check" id="navbarPositionVertical" name="navigation-type" type="radio" value="vertical" data-theme-control="phoenixNavbarPosition" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarPositionVertical"> <span class="rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../../assets/img/generic/default-light.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../../assets/img/generic/default-dark.png" alt=""/></span><span class="label-text">Vertical</span></label></div>
+            <div class="col-6"><input class="btn-check" id="navbarPositionHorizontal" name="navigation-type" type="radio" value="horizontal" data-theme-control="phoenixNavbarPosition" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarPositionHorizontal"> <span class="rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../../assets/img/generic/top-default.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../../assets/img/generic/top-default-dark.png" alt=""/></span><span class="label-text"> Horizontal</span></label></div>
+            <div class="col-6"><input class="btn-check" id="navbarPositionCombo" name="navigation-type" type="radio" value="combo" data-theme-control="phoenixNavbarPosition" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarPositionCombo"> <span class="rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../../assets/img/generic/nav-combo-light.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../../assets/img/generic/nav-combo-dark.png" alt=""/></span><span class="label-text"> Combo</span></label></div>
+            <div class="col-6"><input class="btn-check" id="navbarPositionTopDouble" name="navigation-type" type="radio" value="dual-nav" data-theme-control="phoenixNavbarPosition" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarPositionTopDouble"> <span class="rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../../assets/img/generic/dual-light.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../../assets/img/generic/dual-dark.png" alt=""/></span><span class="label-text"> Dual nav</span></label></div>
+          </div>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Vertical Navbar Appearance</h5>
+          <div class="row gx-2">
+            <div class="col-6"><input class="btn-check" id="navbar-style-default" type="radio" name="config.name" value="default" data-theme-control="phoenixNavbarVerticalStyle" /><label class="btn d-block w-100 btn-navbar-style fs-9" for="navbar-style-default"> <img class="img-fluid img-prototype d-dark-none" src="../../assets/img/generic/default-light.png" alt="" /><img class="img-fluid img-prototype d-light-none" src="../../assets/img/generic/default-dark.png" alt="" /><span class="label-text d-dark-none"> Default</span><span class="label-text d-light-none">Default</span></label></div>
+            <div class="col-6"><input class="btn-check" id="navbar-style-dark" type="radio" name="config.name" value="darker" data-theme-control="phoenixNavbarVerticalStyle" /><label class="btn d-block w-100 btn-navbar-style fs-9" for="navbar-style-dark"> <img class="img-fluid img-prototype d-dark-none" src="../../assets/img/generic/vertical-darker.png" alt="" /><img class="img-fluid img-prototype d-light-none" src="../../assets/img/generic/vertical-lighter.png" alt="" /><span class="label-text d-dark-none"> Darker</span><span class="label-text d-light-none">Lighter</span></label></div>
+          </div>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Horizontal Navbar Shape</h5>
+          <div class="row gx-2">
+            <div class="col-6"><input class="btn-check" id="navbarShapeDefault" name="navbar-shape" type="radio" value="default" data-theme-control="phoenixNavbarTopShape" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarShapeDefault"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../../assets/img/generic/top-default.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../../assets/img/generic/top-default-dark.png" alt=""/></span><span class="label-text">Default</span></label></div>
+            <div class="col-6"><input class="btn-check" id="navbarShapeSlim" name="navbar-shape" type="radio" value="slim" data-theme-control="phoenixNavbarTopShape" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarShapeSlim"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../../assets/img/generic/top-slim.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../../assets/img/generic/top-slim-dark.png" alt=""/></span><span class="label-text"> Slim</span></label></div>
+          </div>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Horizontal Navbar Appearance</h5>
+          <div class="row gx-2">
+            <div class="col-6"><input class="btn-check" id="navbarTopDefault" name="navbar-top-style" type="radio" value="default" data-theme-control="phoenixNavbarTopStyle" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarTopDefault"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../../assets/img/generic/top-default.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../../assets/img/generic/top-style-darker.png" alt=""/></span><span class="label-text">Default</span></label></div>
+            <div class="col-6"><input class="btn-check" id="navbarTopDarker" name="navbar-top-style" type="radio" value="darker" data-theme-control="phoenixNavbarTopStyle" /><label class="btn d-inline-block btn-navbar-style fs-9" for="navbarTopDarker"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../../assets/img/generic/navbar-top-style-light.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../../assets/img/generic/top-style-lighter.png" alt=""/></span><span class="label-text d-dark-none">Darker</span><span class="label-text d-light-none">Lighter</span></label></div>
+          </div>
+        </div><a class="bun btn-primary d-grid mb-3 text-white mt-5 btn btn-primary" href="../../../../../themes.getbootstrap.com/product/phoenix-admin-dashboard-webapp-template/index.html" target="_blank">Purchase template</a>
+      </div>
+    </div><a class="card setting-toggle" href="#settings-offcanvas" data-bs-toggle="offcanvas">
+      <div class="card-body d-flex align-items-center px-2 py-1">
+        <!-- <div class="position-relative rounded-start" style="height:34px;width:28px">
+          <div class="settings-popover"><span class="ripple"><span class="fa-spin position-absolute all-0 d-flex flex-center"><span class="icon-spin position-absolute all-0 d-flex flex-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="#ffffff" xmlns="../../../../../www.w3.org/2000/svg.html"><path d="M19.7369 12.3941L19.1989 12.1065C18.4459 11.7041 18.0843 10.8487 18.0843 9.99495C18.0843 9.14118 18.4459 8.28582 19.1989 7.88336L19.7369 7.59581C19.9474 7.47484 20.0316 7.23291 19.9474 7.03131C19.4842 5.57973 18.6843 4.28943 17.6738 3.20075C17.5053 3.03946 17.2527 2.99914 17.0422 3.12011L16.393 3.46714C15.6883 3.84379 14.8377 3.74529 14.1476 3.3427C14.0988 3.31422 14.0496 3.28621 14.0002 3.25868C13.2568 2.84453 12.7055 2.10629 12.7055 1.25525V0.70081C12.7055 0.499202 12.5371 0.297594 12.2845 0.257272C10.7266 -0.105622 9.16879 -0.0653007 7.69516 0.257272C7.44254 0.297594 7.31623 0.499202 7.31623 0.70081V1.23474C7.31623 2.09575 6.74999 2.8362 5.99824 3.25599C5.95774 3.27861 5.91747 3.30159 5.87744 3.32493C5.15643 3.74527 4.26453 3.85902 3.53534 3.45302L2.93743 3.12011C2.72691 2.99914 2.47429 3.03946 2.30587 3.20075C1.29538 4.28943 0.495411 5.57973 0.0322686 7.03131C-0.051939 7.23291 0.0322686 7.47484 0.242788 7.59581L0.784376 7.8853C1.54166 8.29007 1.92694 9.13627 1.92694 9.99495C1.92694 10.8536 1.54166 11.6998 0.784375 12.1046L0.242788 12.3941C0.0322686 12.515 -0.051939 12.757 0.0322686 12.9586C0.495411 14.4102 1.29538 15.7005 2.30587 16.7891C2.47429 16.9504 2.72691 16.9907 2.93743 16.8698L3.58669 16.5227C4.29133 16.1461 5.14131 16.2457 5.8331 16.6455C5.88713 16.6767 5.94159 16.7074 5.99648 16.7375C6.75162 17.1511 7.31623 17.8941 7.31623 18.7552V19.2891C7.31623 19.4425 7.41373 19.5959 7.55309 19.696C7.64066 19.7589 7.74815 19.7843 7.85406 19.8046C9.35884 20.0925 10.8609 20.0456 12.2845 19.7729C12.5371 19.6923 12.7055 19.4907 12.7055 19.2891V18.7346C12.7055 17.8836 13.2568 17.1454 14.0002 16.7312C14.0496 16.7037 14.0988 16.6757 14.1476 16.6472C14.8377 16.2446 15.6883 16.1461 16.393 16.5227L17.0422 16.8698C17.2527 16.9907 17.5053 16.9504 17.6738 16.7891C18.7264 15.7005 19.4842 14.4102 19.9895 12.9586C20.0316 12.757 19.9474 12.515 19.7369 12.3941ZM10.0109 13.2005C8.1162 13.2005 6.64257 11.7893 6.64257 9.97478C6.64257 8.20063 8.1162 6.74905 10.0109 6.74905C11.8634 6.74905 13.3792 8.20063 13.3792 9.97478C13.3792 11.7893 11.8634 13.2005 10.0109 13.2005Z" fill="#2A7BE4"></path></svg></span></span></span></div>
+        </div><small class="text-uppercase text-body-tertiary fw-bold py-2 pe-2 ps-1 rounded-end">customize</small> -->
+      </div>
+    </a>
+    <div class="modal fade" id="reportsFilterModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border border-translucent">
+          <form id="addEventForm" autocomplete="off">
+            <div class="modal-header justify-content-between border-translucent p-4">
+              <h5 class="modal-title text-body-highlight fs-6 lh-sm">Filter</h5><button class="btn p-1 text-danger" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs-9"> 				</span></button>
+            </div>
+            <div class="modal-body pt-4 pb-2 px-4">
+              <div class="mb-3"><label class="fw-bold mb-2 text-body-highlight" for="priority">Priority</label><select class="form-select" id="priority">
+                  <option value="urgent" selected="selected">Urgent</option>
+                  <option value="medium">Medium </option>
+                  <option value="high">High</option>
+                  <option value="low">Low</option>
+                </select></div>
+              <div class="mb-3"><label class="fw-bold mb-2 text-body-highlight" for="createDate">Create Date</label><select class="form-select" id="createDate">
+                  <option value="today" selected="selected">Today</option>
+                  <option value="last7Days">Last 7 Days</option>
+                  <option value="last30Days">Last 30 Days</option>
+                  <option value="chooseATimePeriod">Choose a time period</option>
+                </select></div>
+              <div class="mb-3"><label class="fw-bold mb-2 text-body-highlight" for="category">Category</label><select class="form-select" id="category">
+                  <option value="salesReports" selected="selected">Sales Reports</option>
+                  <option value="hrReports">HR Reports</option>
+                  <option value="marketingReports">Marketing Reports</option>
+                  <option value="administrativeReports">Administrative Reports</option>
+                </select></div>
+            </div>
+            <div class="modal-footer d-flex justify-content-end align-items-center px-4 pb-4 border-0 pt-3"><button class="btn btn-sm btn-phoenix-primary px-4 fs-10 my-0" type="submit"> <span class="fas fa-arrows-rotate me-2 fs-10"></span>Reset</button><button class="btn btn-sm btn-primary px-9 fs-10 my-0" type="submit">Done</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addDealModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addDealModal" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-body-highlight p-6">
+          <div class="modal-header justify-content-between border-0 p-0 mb-2">
+            <h3 class="mb-0">Virtual Machine Informations</h3><button class="btn btn-sm btn-phoenix-secondary" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times text-danger"></span></button>
+          </div>
+          <div class="modal-body px-0">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Vm Owner</label><select class="form-select">
+                    <option>Select</option>
+                    <option>Ally Aagaard</option>
+                    <option>Aida Moen</option>
+                    <option>Niko Koss</option>
+                    <option>Alec Haag</option>
+                    <option>Lonnie Kub</option>
+                    <option>Ola Smith</option>
+                  </select></div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Vm Name</label><input class="form-control" type="text" placeholder="Enter deal name" /></div>
+                <div class="mb-4">
+                  <div class="row g-3">
+                    <div class="col-sm-6 col-lg-12 col-xl-6"><label class="text-body-highlight fw-bold mb-2">Vm Amount</label>
+                      <div class="row g-2">
+                        <div class="col"><input class="form-control" type="number" placeholder="$ Enter amount" /></div>
+                        <div class="col-auto"><select class="form-select">
+                            <option>USD</option>
+                            <option>GBP</option>
+                            <option>EUR</option>
+                            <option>JPY</option>
+                            <option>CAD</option>
+                            <option>AUD</option>
+                            <option>CNY</option>
+                            <option>CHF</option>
+                            <option>ZAR</option>
+                            <option>BRL</option>
+                            <option>RUB</option>
+                            <option>INR</option>
+                            <option>MXN</option>
+                            <option>NZD</option>
+                            <option>SGD</option>
+                            <option>HKD</option>
+                            <option>KRW</option>
+                            <option>SEK</option>
+                            <option>NOK</option>
+                            <option>TRY</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Vm Code</label><input class="form-control" type="text" placeholder="Enter deals code" /></div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Vm Type<button class="btn btn-link p-0 ms-3"><span class="fa-solid fa-plus me-1"></span><span>Add new</span></button></label><select class="form-select">
+                    <option>Select</option>
+                    <option>Development</option>
+                    <option>High Performance</option>
+                    <option>Standard</option>
+                    <option>Backup-Centric</option>
+                    <option>High Speed</option>
+                    <option>Medium Speed</option>
+                    <option>Low Speed</option>
+                    <option>Ultra Fast</option>
+                    <option>Balanced</option>
+                    <option>Economy</option>
+                  </select></div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Category<button class="btn btn-link p-0 ms-3"><span class="fa-solid fa-plus me-1"></span><span>Add new</span></button></label><select class="form-select">
+                    <option>24/7 Support</option>
+                    <option>Business Hours</option>
+                    <option>Email Support</option>
+                    <option>Phone Support</option>
+                    <option>Priority Support</option>
+                    <option>Community Support</option>
+                  </select></div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Backup (%)</label><input class="form-control" type="text" placeholder="Enter value" /></div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Expected Revenue</label>
+                  <div class="row g-2">
+                    <div class="col"><input class="form-control" type="number" placeholder="$ Enter amount" /></div>
+                    <div class="col-auto"><select class="form-select">
+                        <option>USD</option>
+                        <option>GBP</option>
+                        <option>EUR</option>
+                        <option>JPY</option>
+                        <option>CAD</option>
+                        <option>AUD</option>
+                        <option>CNY</option>
+                        <option>CHF</option>
+                        <option>ZAR</option>
+                        <option>BRL</option>
+                        <option>RUB</option>
+                        <option>INR</option>
+                        <option>MXN</option>
+                        <option>NZD</option>
+                        <option>SGD</option>
+                        <option>HKD</option>
+                        <option>KRW</option>
+                        <option>SEK</option>
+                        <option>NOK</option>
+                        <option>TRY</option>
+                      </select></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Contact Name</label><input class="form-control" type="text" placeholder="Enter contact name" /></div>
+                <div class="mb-4">
+                  <div class="row g-3">
+                    <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Phone Number</label><input class="form-control" type="text" placeholder="Enter phone number" /></div>
+                    <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Email Address</label><input class="form-control" type="text" placeholder="Enter email address" /></div>
+                  </div>
+                </div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Storage Type<button class="btn btn-link p-0 ms-3"><span class="fa-solid fa-plus me-1"></span><span>Add new</span></button></label><select class="form-select">
+                    <option>Select</option>
+                    <option>SSD</option>
+                    <option>HDD</option>
+                    <option>NVMe</option>
+                    <option>Hybrid</option>
+                    <option>Cloud Storage</option>
+                    <option>Linkedin</option>
+                    <option>Local Storage</option>
+                  </select></div>
+                <div class="mb-4"><label class="text-body-highlight fw-bold mb-2">Backup Options<button class="btn btn-link p-0 ms-3"><span class="fa-solid fa-plus me-1"></span><span>Add new</span></button></label><select class="form-select">
+                    <option>Select</option>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Manual</option>
+                  </select></div>
+                <div class="mb-4">
+                  <label class="text-body-highlight fw-bold mb-2">Time Zone</label>
+                  <select class="form-select">
+                    <option>GMT-12:00 Etc/GMT-12</option>
+                    <option>GMT-11:00 Etc/GMT-11</option>
+                    <option>GMT-11:00 Pacific/Midway</option>
+                    <option>GMT-10:00 America/Adak</option>
+                    <option>GMT-09:00 America/Anchorage</option>
+                    <option>GMT-09:00 Pacific/Gambier</option>
+                    <option>GMT-08:00 America/Dawson_Creek</option>
+                    <option>GMT-08:00 America/Ensenada</option>
+                    <option>GMT-08:00 America/Los_Angeles</option>
+                    <option>GMT-07:00 America/Chihuahua</option>
+                    <option>GMT-07:00 America/Denver</option>
+                    <option>GMT-06:00 America/Belize</option>
+                    <option>GMT-06:00 America/Cancun</option>
+                    <option>GMT-06:00 America/Chicago</option>
+                    <option>GMT-06:00 Chile/EasterIsland</option>
+                    <option>GMT-05:00 America/Bogota</option>
+                    <option>GMT-05:00 America/Havana</option>
+                    <option>GMT-05:00 America/New_York</option>
+                    <option>GMT-04:30 America/Caracas</option>
+                    <option>GMT-04:00 America/Campo_Grande</option>
+                    <option>GMT-04:00 America/Glace_Bay</option>
+                    <option>GMT-04:00 America/Goose_Bay</option>
+                    <option>GMT-04:00 America/Santiago</option>
+                    <option>GMT-04:00 America/La_Paz</option>
+                    <option>GMT-03:00 America/Argentina/Buenos_Aires</option>
+                    <option>GMT-03:00 America/Montevideo</option>
+                    <option>GMT-03:00 America/Araguaina</option>
+                    <option>GMT-03:00 America/Godthab</option>
+                    <option>GMT-03:00 America/Miquelon</option>
+                    <option>GMT-03:00 America/Sao_Paulo</option>
+                    <option>GMT-03:30 America/St_Johns</option>
+                    <option>GMT-02:00 America/Noronha</option>
+                    <option>GMT-01:00 Atlantic/Cape_Verde</option>
+                    <option>GMT Europe/Belfast</option>
+                    <option>GMT Africa/Abidjan</option>
+                    <option>GMT Europe/Dublin</option>
+                    <option>GMT Europe/Lisbon</option>
+                    <option>GMT Europe/London</option>
+                    <option>UTC UTC</option>
+                    <option>GMT+01:00 Africa/Algiers</option>
+                    <option>GMT+01:00 Africa/Windhoek</option>
+                    <option>GMT+01:00 Atlantic/Azores</option>
+                    <option>GMT+01:00 Atlantic/Stanley</option>
+                    <option>GMT+01:00 Europe/Amsterdam</option>
+                    <option>GMT+01:00 Europe/Belgrade</option>
+                    <option>GMT+01:00 Europe/Brussels</option>
+                    <option>GMT+02:00 Africa/Cairo</option>
+                    <option>GMT+02:00 Africa/Blantyre</option>
+                    <option>GMT+02:00 Asia/Beirut</option>
+                    <option>GMT+02:00 Asia/Damascus</option>
+                    <option>GMT+02:00 Asia/Gaza</option>
+                    <option>GMT+02:00 Asia/Jerusalem</option>
+                    <option>GMT+03:00 Africa/Addis_Ababa</option>
+                    <option>GMT+03:00 Asia/Riyadh89</option>
+                    <option>GMT+03:00 Europe/Minsk</option>
+                    <option>GMT+03:30 Asia/Tehran</option>
+                    <option>GMT+04:00 Asia/Dubai</option>
+                    <option>GMT+04:00 Asia/Yerevan</option>
+                    <option>GMT+04:00 Europe/Moscow</option>
+                    <option>GMT+04:30 Asia/Kabul</option>
+                    <option>GMT+05:00 Asia/Tashkent</option>
+                    <option>GMT+05:30 Asia/Kolkata</option>
+                    <option>GMT+05:45 Asia/Katmandu</option>
+                    <option>GMT+06:00 Asia/Dhaka</option>
+                    <option>GMT+06:00 Asia/Yekaterinburg</option>
+                    <option>GMT+06:30 Asia/Rangoon</option>
+                    <option>GMT+07:00 Asia/Bangkok</option>
+                    <option>GMT+07:00 Asia/Novosibirsk</option>
+                    <option>GMT+08:00 Etc/GMT+8</option>
+                    <option>GMT+08:00 Asia/Hong_Kong</option>
+                    <option>GMT+08:00 Asia/Krasnoyarsk</option>
+                    <option>GMT+08:00 Australia/Perth</option>
+                    <option>GMT+08:45 Australia/Eucla</option>
+                    <option>GMT+09:00 Asia/Irkutsk</option>
+                    <option>GMT+09:00 Asia/Seoul</option>
+                    <option>GMT+09:00 Asia/Tokyo</option>
+                    <option>GMT+09:30 Australia/Adelaide</option>
+                    <option>GMT+09:30 Australia/Darwin</option>
+                    <option>GMT+09:30 Pacific/Marquesas</option>
+                    <option>GMT+10:00 Etc/GMT+10</option>
+                    <option>GMT+10:00 Australia/Brisbane</option>
+                    <option>GMT+10:00 Australia/Hobart</option>
+                    <option>GMT+10:00 Asia/Yakutsk</option>
+                    <option>GMT+10:30 Australia/Lord_Howe</option>
+                    <option>GMT+11:00 Asia/Vladivostok</option>
+                    <option>GMT+11:30 Pacific/Norfolk</option>
+                    <option>GMT+12:00 Etc/GMT+12</option>
+                    <option>GMT+12:00 Asia/Anadyr</option>
+                    <option>GMT+12:00 Asia/Magadan</option>
+                    <option>GMT+12:00 Pacific/Auckland</option>
+                    <option>GMT+12:45 Pacific/Chatham</option>
+                    <option>GMT+13:00 Pacific/Tongatapu</option>
+                    <option>GMT+14:00 Pacific/Kiritimati</option>
+                  </select></div>
+                <div class="mb-4">
+                  <div class="row g-3">
+                    <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Create Date</label><input class="form-control datetimepicker" type="text" placeholder="dd / mm / yyyy" data-options='{"disableMobile":true}' /></div>
+                    <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Start Time</label><input class="form-control datetimepicker" type="text" placeholder="H:i" data-options='{"enableTime":true,"noCalendar":true,"dateFormat":"H:i","disableMobile":true}' /></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="row g-3">
+                    <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Closing Date</label><input class="form-control datetimepicker" type="text" placeholder="dd / mm / yyyy" data-options='{"disableMobile":true}' /></div>
+                    <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Closing Time</label><input class="form-control datetimepicker" type="text" placeholder="H:i" data-options='{"enableTime":true,"noCalendar":true,"dateFormat":"H:i","disableMobile":true}' /></div>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Operating System</label><select class="form-select">
+                      <option>Select</option>
+                      <option>Windows</option>
+                      <option>Linux</option>
+                      <option>Ubuntu</option>
+                      <option>CentOs</option>
+                      <option>Debian</option>
+                      <option>Fedora</option>
+                    </select></div>
+                  <div class="col-6"><label class="text-body-highlight fw-bold mb-2">Security Features</label><select class="form-select">
+                      <option>Encryption</option>
+                      <option>Firewall</option>
+                      <option>VPN</option>
+                      <option>Anti-Malware</option>
+                      <option>Ddos Protection</option>
+                      <option>Two-Factor Authentication</option>
+                    </select></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-6 px-0 pb-0"><button class="btn btn-link text-danger px-3 my-0" data-bs-dismiss="modal" aria-label="Close">Cancel</button><button class="btn btn-primary my-0">Create Deal</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addStageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addStageModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-4">
+            <h3 class="mb-5 text-body-highlight">Create New Category</h3>
+            <div class="mb-4"><label class="mb-2 fw-bold text-body-highlight">Category Name</label><input class="form-control" type="text" placeholder="Enter category name" /></div><label class="mb-2 fw-bold text-body-highlight">Forecast Revenue</label><input class="form-control" type="text" placeholder="$  Enter amount" />
+          </div>
+          <div class="modal-footer border-0 pt-3 px-4 pb-4"><button class="btn btn-link text-danger px-4 m-0" data-bs-dismiss="modal" aria-label="Close">Cancel</button><button class="btn btn-primary px-6 m-0">Create New Category</button></div>
+        </div>
+      </div>
+    </div>
