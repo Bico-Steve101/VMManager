@@ -535,7 +535,193 @@
         <div class="card-body d-flex align-items-center px-2 py-1">
           <!-- <div class="position-relative rounded-start" style="height:34px;width:28px">
             <div class="settings-popover"><span class="ripple"><span class="fa-spin position-absolute all-0 d-flex flex-center"><span class="icon-spin position-absolute all-0 d-flex flex-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="#ffffff" xmlns="../../../../../../www.w3.org/2000/svg.html"><path d="M19.7369 12.3941L19.1989 12.1065C18.4459 11.7041 18.0843 10.8487 18.0843 9.99495C18.0843 9.14118 18.4459 8.28582 19.1989 7.88336L19.7369 7.59581C19.9474 7.47484 20.0316 7.23291 19.9474 7.03131C19.4842 5.57973 18.6843 4.28943 17.6738 3.20075C17.5053 3.03946 17.2527 2.99914 17.0422 3.12011L16.393 3.46714C15.6883 3.84379 14.8377 3.74529 14.1476 3.3427C14.0988 3.31422 14.0496 3.28621 14.0002 3.25868C13.2568 2.84453 12.7055 2.10629 12.7055 1.25525V0.70081C12.7055 0.499202 12.5371 0.297594 12.2845 0.257272C10.7266 -0.105622 9.16879 -0.0653007 7.69516 0.257272C7.44254 0.297594 7.31623 0.499202 7.31623 0.70081V1.23474C7.31623 2.09575 6.74999 2.8362 5.99824 3.25599C5.95774 3.27861 5.91747 3.30159 5.87744 3.32493C5.15643 3.74527 4.26453 3.85902 3.53534 3.45302L2.93743 3.12011C2.72691 2.99914 2.47429 3.03946 2.30587 3.20075C1.29538 4.28943 0.495411 5.57973 0.0322686 7.03131C-0.051939 7.23291 0.0322686 7.47484 0.242788 7.59581L0.784376 7.8853C1.54166 8.29007 1.92694 9.13627 1.92694 9.99495C1.92694 10.8536 1.54166 11.6998 0.784375 12.1046L0.242788 12.3941C0.0322686 12.515 -0.051939 12.757 0.0322686 12.9586C0.495411 14.4102 1.29538 15.7005 2.30587 16.7891C2.47429 16.9504 2.72691 16.9907 2.93743 16.8698L3.58669 16.5227C4.29133 16.1461 5.14131 16.2457 5.8331 16.6455C5.88713 16.6767 5.94159 16.7074 5.99648 16.7375C6.75162 17.1511 7.31623 17.8941 7.31623 18.7552V19.2891C7.31623 19.4425 7.41373 19.5959 7.55309 19.696C7.64066 19.7589 7.74815 19.7843 7.85406 19.8046C9.35884 20.0925 10.8609 20.0456 12.2845 19.7729C12.5371 19.6923 12.7055 19.4907 12.7055 19.2891V18.7346C12.7055 17.8836 13.2568 17.1454 14.0002 16.7312C14.0496 16.7037 14.0988 16.6757 14.1476 16.6472C14.8377 16.2446 15.6883 16.1461 16.393 16.5227L17.0422 16.8698C17.2527 16.9907 17.5053 16.9504 17.6738 16.7891C18.7264 15.7005 19.4842 14.4102 19.9895 12.9586C20.0316 12.757 19.9474 12.515 19.7369 12.3941ZM10.0109 13.2005C8.1162 13.2005 6.64257 11.7893 6.64257 9.97478C6.64257 8.20063 8.1162 6.74905 10.0109 6.74905C11.8634 6.74905 13.3792 8.20063 13.3792 9.97478C13.3792 11.7893 11.8634 13.2005 10.0109 13.2005Z" fill="#2A7BE4"></path></svg></span></span></span></div>
-          </div>
-          <small class="text-uppercase text-body-tertiary fw-bold py-2 pe-2 ps-1 rounded-end">customize</small> -->
+          </div><small class="text-uppercase text-body-tertiary fw-bold py-2 pe-2 ps-1 rounded-end">customize</small> -->
         </div>
       </a>
+      <div class="modal fade" tabindex="-1" id="flightFilterModal" aria-labelledby="flightFilterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down" style="max-width: 53.313rem">
+          <form class="modal-content">
+            <div class="modal-header p-4 pb-3 align-items-start border-0">
+              <div>
+                <h4 class="mb-2 text-body-highlight" id="flightFilterModalLabel">Filter</h4>
+                <p class="mb-0">Search for flights according to your preferences</p>
+              </div><button class="btn btn-close fs-10" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body scrollbar px-4 py-3">
+              <div class="row g-5">
+                <div class="col-md-6">
+                  <div class="row g-0">
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightStops" role="button" aria-expanded="true" aria-controls="flightStops">
+                          <h5 class="mb-0 fs-8">Stops</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightStops">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="fligtStopsDirect" /><label class="form-check-label fs-8 text-body" for="fligtStopsDirect">Direct</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="fligtStops1" /><label class="form-check-label fs-8 text-body" for="fligtStops1">1 stop</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="fligtStops2" /><label class="form-check-label fs-8 text-body" for="fligtStops2">2 stop</label></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightTime" role="button" aria-expanded="true" aria-controls="flightTime">
+                          <h5 class="mb-0 fs-8">Flight Schedules</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightTime">
+                          <div class="mb-4">
+                            <h5 class="mb-3">Departure</h5>
+                            <div class="row g-2">
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightDepartureTime" id="departure8AMTo10AM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="departure8AMTo10AM">8 AM - 10 AM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightDepartureTime" id="departure10AMTo12PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="departure10AMTo12PM">10 AM - 12 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightDepartureTime" id="departure12PMTo2PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="departure12PMTo2PM">12 PM - 2 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightDepartureTime" id="departure2PMTo4PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="departure2PMTo4PM">2 PM - 4 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightDepartureTime" id="departure4PMTo6PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="departure4PMTo6PM">4 PM - 6 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightDepartureTime" id="departure6PMTo8PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="departure6PMTo8PM">6 PM - 8 PM</label></div>
+                            </div>
+                          </div>
+                          <div class="mb-4">
+                            <h5 class="mb-3">Arrival</h5>
+                            <div class="row g-2">
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightArrivalTime" id="arrival8AMTo10AM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="arrival8AMTo10AM">8 AM - 10 AM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightArrivalTime" id="arrival10AMTo12PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="arrival10AMTo12PM">10 AM - 12 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightArrivalTime" id="arrival12PMTo2PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="arrival12PMTo2PM">12 PM - 2 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightArrivalTime" id="arrival2PMTo4PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="arrival2PMTo4PM">2 PM - 4 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightArrivalTime" id="arrival4PMTo6PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="arrival4PMTo6PM">4 PM - 6 PM</label></div>
+                              <div class="col-6 col-sm-4"><input class="btn-check flight-filter-checkbox" type="checkbox" name="flightArrivalTime" id="arrival6PMTo8PM" /><label class="btn btn-phoenix-secondary text-nowrap w-100 px-0" for="arrival6PMTo8PM">6 PM - 8 PM</label></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightAirlines" role="button" aria-expanded="true" aria-controls="flightAirlines">
+                          <h5 class="mb-0 fs-8">Airlines</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightAirlines">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="novoair" /><label class="form-check-label fs-8 text-body" for="novoair">NOVOAIR</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="biman" /><label class="form-check-label fs-8 text-body" for="biman">Biman Bangladesh Airlines</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="usBangla" /><label class="form-check-label fs-8 text-body" for="usBangla">US Bangla</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="airAstra" /><label class="form-check-label fs-8 text-body" for="airAstra">Air Astra</label></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightDuration" role="button" aria-expanded="true" aria-controls="flightDuration">
+                          <h5 class="mb-0 fs-8">Flight Duration</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightDuration">
+                          <div class="d-flex flex-between-center mb-2">
+                            <h6 class="mb-0 text-body-highlight fw-semibold">0h 45m</h6>
+                            <h6 class="mb-0 text-body-highlight fw-semibold">0h 55m</h6>
+                          </div>
+                          <div class="noUi-primary-lighter noUi-handle-primary noUi-slider-medium noUi-handle-circle px-1 mt-3" data-nouislider-values='["45m","46m","47m","48m","49m","50m","51m","52m","53m","54m","55m"]' data-nouislider='{"start":["48m"],"connect":[true,false]}'></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row g-0">
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightPriceCalculator" role="button" aria-expanded="true" aria-controls="flightPriceCalculator">
+                          <h5 class="mb-0 fs-8">Price Calculator</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightPriceCalculator"><select class="form-select" data-choices="data-choices" multiple="multiple" data-options='{"removeItemButton":true,"placeholder":true}'>
+                            <option value="">Select method</option>
+                            <option>Mastercard debit</option>
+                            <option>Mastercard credit</option>
+                            <option>Visa debit</option>
+                            <option>Visa credit</option>
+                            <option>American Express</option>
+                            <option>Paypal</option>
+                          </select></div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightAirports" role="button" aria-expanded="true" aria-controls="flightAirports">
+                          <h5 class="mb-0 fs-8">Airports</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightAirports">
+                          <div class="d-flex gap-3">
+                            <div class="flex-1">
+                              <h5 class="mb-3">Dhaka</h5>
+                              <div class="form-check gap-2"><input class="form-check-input mt-0" type="checkbox" id="DAC" /><label class="form-check-label fs-9 text-body lh-sm" for="DAC">DAC : Hazrat Shahjalal International Airport</label></div>
+                            </div>
+                            <div class="flex-1">
+                              <h5 class="mb-3">Sylhet</h5>
+                              <div class="form-check gap-2"><input class="form-check-input mt-0" type="checkbox" id="ZYL" /><label class="form-check-label fs-9 text-body lh-sm" for="ZYL">ZYL : Osmani International Airport</label></div>
+                              <div class="form-check gap-2"><input class="form-check-input mt-0" type="checkbox" id="GNJ" /><label class="form-check-label fs-9 text-body lh-sm" for="GNJ">GNJ : Gajikalu Interdimensional Airport</label></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightBaggage" role="button" aria-expanded="true" aria-controls="flightBaggage">
+                          <h5 class="mb-0">Baggage</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightBaggage">
+                          <div class="d-flex gap-2 justify-content-between">
+                            <div>
+                              <h5 class="mb-3 text-body-highlight">Carry on bag</h5>
+                              <div class="input-group flex-nowrap gap-1" data-quantity="data-quantity"><button class="btn btn-phoenix-primary px-2 rounded" data-type="minus"><span class="fa-solid fa-minus px-1"></span></button><input class="form-control border-translucent input-spin-none text-center rounded" id="carryOnBag" type="number" value="2" /><button class="btn btn-phoenix-primary px-2 rounded" data-type="plus"><span class="fa-solid fa-plus px-1"></span></button></div>
+                            </div>
+                            <div>
+                              <h5 class="mb-3 text-body-highlight">Checked bag</h5>
+                              <div class="input-group flex-nowrap gap-1" data-quantity="data-quantity"><button class="btn btn-phoenix-primary px-2 rounded" data-type="minus"><span class="fa-solid fa-minus px-1"></span></button><input class="form-control border-translucent input-spin-none text-center rounded" id="checkedBag" type="number" value="2" /><button class="btn btn-phoenix-primary px-2 rounded" data-type="plus"><span class="fa-solid fa-plus px-1"></span></button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-6"> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightCabin" role="button" aria-expanded="true" aria-controls="flightCabin">
+                          <h5 class="mb-0 fs-8">Cabin</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightCabin">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="economy" /><label class="form-check-label fs-8 text-body" for="economy">Economy</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="business" /><label class="form-check-label fs-8 text-body" for="business">Business</label></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div> <a class="btn py-2 px-3 d-flex flex-between-center collapse-indicator text-body-highlight bg-body-highlight" data-bs-toggle="collapse" href="#flightAircraft" role="button" aria-expanded="true" aria-controls="flightAircraft">
+                          <h5 class="mb-0 fs-8">Aircraft</h5><span class="fa-solid fa-chevron-down toggle-icon"></span>
+                        </a>
+                        <div class="collapse show p-3 pb-0" id="flightAircraft">
+                          <div class="d-flex mb-3">
+                            <div class="form-check form-check-inline"><input class="form-check-input" id="includedAircraft" type="radio" name="aircrafts" /><label class="form-check-label fs-8 text-body" for="includedAircraft">Include</label></div>
+                            <div class="form-check form-check-inline"><input class="form-check-input" id="excludedAircraft" type="radio" name="aircrafts" checked="checked" /><label class="form-check-label fs-8 text-body" for="excludedAircraft">Exclude</label></div>
+                          </div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="aircraft738" /><label class="form-check-label fs-8 text-body" for="aircraft738">738</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="aircraftAT7" /><label class="form-check-label fs-8 text-body" for="aircraftAT7">AT-7</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="aircraftA320" /><label class="form-check-label fs-8 text-body" for="aircraftA320">A320</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="aircraft787" /><label class="form-check-label fs-8 text-body" for="aircraft787">787 Dreamliner</label></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0 p-4 pt-0">
+              <div class="w-100 d-flex flex-wrap gap-3 border-top border-translucent pt-4"> <button class="m-0 btn btn-lg btn-phoenix-primary text-nowrap"> <span class="fa-solid fa-rotate me-sm-2"></span><span class="d-none d-sm-inline-block">Reset filter</span></button><button class="m-0 btn btn-lg btn-primary text-nowrap flex-1"> <span class="fa-solid fa-magnifying-glass me-2"></span>Update results</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal fade" tabindex="-1" id="flightPromoModal" data-phoenix-modal='{"autoShow":true}' aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+            <div class="modal-body position- p-6">
+              <div class="position-absolute end-0 top-0"><button class="btn btn-link text-danger px-3" data-bs-dismiss="modal" aria-label="Close"><span class="fa-solid fa-times" data-fa-transform="down-2"></span></button></div>
+              <div class="text-center"> <img class="d-dark-none img-fluid mb-4" src="../../../assets/img/spot-illustrations/44.png" width="130" alt="" /><img class="d-light-none img-fluid mb-4" src="../../../assets/img/spot-illustrations/44-dark.png" width="130" alt="" />
+                <h1 class="text-success">Save 20%</h1>
+                <h3 class="mb-2 text-body">on available Machines - Join now!</h3>
+                <p class="mb-4 fs-9">Sign up now to save up to 20% on virtual machines with our free membership program!</p>
+                <div class="d-flex gap-2 align-items-center mb-4"><input class="form-control" type="email" placeholder="Your email address" /><a href="/sign-in"><button class="btn btn-primary rounded text-nowrap px-sm-6">Sign-up</button></a></div>
+                <p class="mb-1 fs-9 text-body-quaternary">Subscribe for exclusive offers. <a href="#!">Privacy Policy</a></p><button class="btn btn-link p-0 fs-10 text-decoration-underline text-body-tertiary" data-bs-dismiss="modal" data-disable-modal-auto-show="data-disable-modal-auto-show" aria-label="Close">Don’t show it again</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
